@@ -9,7 +9,8 @@ from event_service_utils.logging.decorators import timer_logger
 from event_service_utils.services.event_driven import BaseEventDrivenCMDService
 from event_service_utils.tracing.jaeger import init_tracer
 
-from adaptive_publisher.event_publishers.publisher import EventPublisher
+from adaptive_publisher.event_publishers.adaptive_microbatch_publisher import AdaptiveMicroBatchEventPublisher as EventPublisher
+
 
 from adaptive_publisher.conf import (
     LISTEN_EVENT_TYPE_EARLY_FILTERING_UPDATED,
